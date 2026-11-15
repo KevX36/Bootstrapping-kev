@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    
     public void LoadLevel(string level)
     {
         Debug.Log("loaded " + level);
@@ -12,5 +13,15 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("quit game");
         Application.Quit();
+    }
+    public void LoadUiScene()
+    {
+        Debug.Log("loaded UI");
+        SceneManager.LoadSceneAsync("UI scene", LoadSceneMode.Additive);
+    }
+    public void UnloadUiScene()
+    {
+        Debug.Log("unloaded UI");
+        SceneManager.UnloadSceneAsync("UI scene");
     }
 }

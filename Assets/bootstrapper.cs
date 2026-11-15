@@ -14,9 +14,19 @@ public class bootstrapper : MonoBehaviour
         if(GameManager.instance.levelManager == null)
         {
             GameManager.instance.levelManager = FindAnyObjectByType<LevelManager>();
-            
+            GameManager.instance.levelManager.transform.parent = GameManager.instance.transform;
         }
-        
+        if (GameManager.instance.levelManager == null)
+        {
+            GameManager.instance.levelManager = FindAnyObjectByType<LevelManager>();
+            GameManager.instance.levelManager.transform.parent = GameManager.instance.transform;
+        }
+        if (GameManager.instance.levelManager == null)
+        {
+            GameManager.instance.levelManager = FindAnyObjectByType<LevelManager>();
+            GameManager.instance.levelManager.transform.parent = GameManager.instance.transform;
+        }
+
     }
 
     
