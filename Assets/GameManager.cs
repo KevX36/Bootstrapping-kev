@@ -19,6 +19,6 @@ public class GameManager : MonoBehaviour
     }
     public LevelManager levelManager;
     public UIManger uIManger;
-    public GameManager gameStateManager;
+    public GameStateMnager gameStateManager;
     
 }

@@ -3,6 +3,18 @@ using UnityEngine;
 
 public class GameStateMnager : MonoBehaviour
 {
+
+    public void SetUp()
+    {
+        if (currentState == GameState.MainMenu)
+        {
+            OnStateChange();
+        }
+        else
+        {
+            SetState(GameState.MainMenu);
+        }
+    }
     public enum GameState
     {
         
@@ -25,14 +37,14 @@ public class GameStateMnager : MonoBehaviour
         if (currentState == state) return;
         lastState = currentState;
         currentState = state;
-        OnStateChange(currentState);
+        OnStateChange();
 
 
     }
     
-    private void OnStateChange(GameState newState)
+    private void OnStateChange()
     {
-        switch (newState)
+        switch (currentState)
         {
             case GameState.MainMenu:
                 GameManager.instance.levelManager.LoadLevel("main menu");

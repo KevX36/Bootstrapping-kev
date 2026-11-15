@@ -30,4 +30,6 @@ public class UIManger : MonoBehaviour
         HUD.SetActive(false);
         pauseScreen.SetActive(false);
     }
+
+    
 }
