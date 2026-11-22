@@ -169,7 +169,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 635619023}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 635619023}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: Pause
         m_Mode: 1
@@ -273,7 +273,7 @@ MonoBehaviour:
     m_ActionName: 'Player/pause[/Keyboard/escape]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 635619023}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: heal
         m_Mode: 0
@@ -289,7 +289,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Heal[/Keyboard/2]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 635619023}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: takeDamage
         m_Mode: 0
@@ -305,7 +305,7 @@ MonoBehaviour:
     m_ActionName: 'Player/take damage[/Keyboard/1]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 635619023}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: RegenMana
         m_Mode: 0
@@ -321,7 +321,7 @@ MonoBehaviour:
     m_ActionName: 'Player/recover mana[/Keyboard/4]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 635619023}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: takeDamage
         m_Mode: 0
@@ -487,13 +487,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 635619015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2441df0dbc4aaf24b95eadea61928149, type: 3}
+  m_Script: {fileID: 11500000, guid: 6240b1ca65410d94584528fccf8fef36, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Player
-  speed: 4
-  rb: {fileID: 635619017}
-  HP: 100
-  MP: 30
+  m_EditorClassIdentifier: Assembly-CSharp::animationcontroller
 --- !u!1 &1097452699
 GameObject:
   m_ObjectHideFlags: 0
