@@ -44,11 +44,7 @@ public class animationcontroller : MonoBehaviour
 
         }
     }
-    public void Pause()
-    {
-        move = Vector3.zero;
-        GameManager.instance.gameStateManager.OnPause();
-    }
+    
 
     public void OnDash(InputAction.CallbackContext context)
     {

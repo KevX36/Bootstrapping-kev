@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 635619018}
   - component: {fileID: 635619017}
   - component: {fileID: 635619016}
+  - component: {fileID: 635619026}
   - component: {fileID: 635619025}
   - component: {fileID: 635619024}
   m_Layer: 0
@@ -169,8 +170,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 635619023}
-        m_TargetAssemblyTypeName: animationcontroller, Assembly-CSharp
+      - m_Target: {fileID: 635619026}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
         m_Arguments:
@@ -201,9 +202,9 @@ MonoBehaviour:
     m_ActionName: 'Player/Crouch[/Keyboard/c]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 635619023}
-        m_TargetAssemblyTypeName: animationcontroller, Assembly-CSharp
-        m_MethodName: OnDash
+      - m_Target: {fileID: 635619026}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Dash
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -269,8 +270,8 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 635619023}
-        m_TargetAssemblyTypeName: animationcontroller, Assembly-CSharp
+      - m_Target: {fileID: 635619026}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
@@ -284,19 +285,67 @@ MonoBehaviour:
     m_ActionId: 1c00c4ef-1059-43b7-b480-cdb20fe61dec
     m_ActionName: 'Player/pause[/Keyboard/escape]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 635619026}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: heal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 30841344-ccdb-482d-a113-00b9427f5f6d
     m_ActionName: 'Player/Heal[/Keyboard/2]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 635619026}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: takeDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a96f800b-6f33-4cd2-b760-348ed54215a8
     m_ActionName: 'Player/take damage[/Keyboard/1]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 635619026}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: RegenMana
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e161e565-68b8-4ebd-9ab1-e5ad5392dc0a
     m_ActionName: 'Player/recover mana[/Keyboard/4]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 635619026}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: CastSpell
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f42310da-5038-45a4-b138-b4cb0650801f
     m_ActionName: 'Player/cast spell[/Keyboard/2]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -479,6 +528,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &635619026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635619015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2441df0dbc4aaf24b95eadea61928149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  speed: 4
+  rb: {fileID: 0}
+  HP: 100
+  MP: 30
+  controller: {fileID: 635619023}
 --- !u!1 &1097452699
 GameObject:
   m_ObjectHideFlags: 0

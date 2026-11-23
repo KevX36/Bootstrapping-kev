@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public Rigidbody rb;
     public int HP = 100;
     public int MP = 30;
+    public animationcontroller controller;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,9 +20,19 @@ public class Player : MonoBehaviour
         if(GameManager.instance.gameStateManager.currentState == GameStateMnager.GameState.GamePlay)
         {
             move = context.ReadValue<Vector2>();
+            controller.Move(context);
             Debug.Log("getting movement");
         }
         
+    }
+
+    public void Dash(InputAction.CallbackContext context)
+    {
+        if (context.performed && GameManager.instance.gameStateManager.currentState == GameStateMnager.GameState.GamePlay)
+        {
+            Debug.Log("dashing");
+            controller.OnDash(context);
+        }
     }
     // Update is called once per frame
     void Update()
