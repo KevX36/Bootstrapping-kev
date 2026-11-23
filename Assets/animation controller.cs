@@ -9,6 +9,12 @@ public class animationcontroller : MonoBehaviour
         
     }
     Vector2 move;
+    //animation veriables
+    [SerializeField] private Animator animator;
+    private int MoveHashX = Animator.StringToHash("moveX");
+    private int MoveHashY = Animator.StringToHash("moveY");
+    private int isMovingHash = Animator.StringToHash("IsMoving");
+    private int dashTrigger = Animator.StringToHash("Dashing");
     public void Move(InputAction.CallbackContext context)
     {
         if (GameManager.instance.gameStateManager.currentState == GameStateMnager.GameState.GamePlay)
@@ -32,5 +38,14 @@ public class animationcontroller : MonoBehaviour
     {
         move = Vector3.zero;
         GameManager.instance.gameStateManager.OnPause();
+    }
+
+    public void OnDash(InputAction.CallbackContext context)
+    {
+        if (GameManager.instance.gameStateManager.currentState == GameStateMnager.GameState.GamePlay)
+        {
+            
+            Debug.Log("getting movement");
+        }
     }
 }
